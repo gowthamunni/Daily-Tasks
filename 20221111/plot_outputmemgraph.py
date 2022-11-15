@@ -4,7 +4,7 @@ import seaborn as sns
 import numpy as np
 
 
-def get_logplot(logpath, parameter_toplt, max_memory, total_mem_limit = 5000, layer_id_limit=100,out_image_path="img.png",
+def get_logplot(logfilepath, parameter_toplt, max_memory, total_mem_limit = 5000, layer_id_limit=100,out_image_path="img.png",
                 trigger_memory = None, ddr_memory=None, stop_memory=None):
     
     
@@ -16,7 +16,7 @@ def get_logplot(logpath, parameter_toplt, max_memory, total_mem_limit = 5000, la
     TOTAL_MEM_LIMIT = total_mem_limit
     LAYER_ID_LIMIT = layer_id_limit
 
-    with open(logpath, "r") as logfile:
+    with open(logfilepath, "r") as logfile:
 
         files_list = logfile.readlines()
     
@@ -106,5 +106,5 @@ if __name__ == "__main__":
     max_memory = 3000
     total_mem_limit = 5000
     out_image_path = "./graphs/1110log_plotmbv2.png"
-    get_logplot(logpath = path, parameter_toplt = "output_mem", max_memory = max_memory,total_mem_limit = total_mem_limit,
+    get_logplot(logfilepath = path, parameter_toplt = "output_mem", max_memory = max_memory,total_mem_limit = total_mem_limit,
                     out_image_path=out_image_path)
