@@ -6,6 +6,16 @@ __pycache__/
 # C extensions
 *.so
 
+# tflite extension
+*.tflite
+
+# h5 and savedmodel extension
+*.h5
+*.savedmodel
+
+# onnx extension
+*.onnx
+
 # Distribution / packaging
 .Python
 build/
